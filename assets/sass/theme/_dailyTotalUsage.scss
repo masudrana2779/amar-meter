@@ -1,0 +1,53 @@
+
+.bodyContent {
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: -75px;
+  .bodyContentInner {
+
+  }
+}
+
+.dailyTotalUsageInner {
+  .dailyTotalUsageInnerContent {
+    padding-top: 20px;
+    .dailyTitle {
+      color: $dark;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    p {
+      padding-left: 30px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.dailyTotalUsageWrap {
+
+}
+
+.counterWrap {
+  .counterSingItem {
+    width: 100%;
+
+    h5 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $light;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      color: $dark;
+      text-align: center;
+    }
+  }
+}

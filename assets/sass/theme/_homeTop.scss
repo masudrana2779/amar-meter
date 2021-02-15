@@ -1,0 +1,76 @@
+.homeTop {
+  background: url("../../../assets/img/svg/20.BG.svg");
+  border-radius: 0 0 40px 40px;
+  padding: 40px 0 0 0;
+
+  .topInner {
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+
+    .userName {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+
+    .useItemWrap {
+      padding: 0 15px;
+      margin-bottom: 15px;
+
+      .itemInner {
+        .useSingItem {
+          .icon {
+            margin-right: 10px;
+
+            img {
+
+            }
+          }
+
+          .text {
+            h4 {
+              font-size: 32px;
+              line-height: 48px;
+              font-weight: 600;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .youRusing {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 300;
+      margin-bottom: 100px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.settingIcon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  img {
+    max-width: 20px;
+    width: 100%;
+    animation: rot 10s linear infinite;
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(-360deg);
+  }
+}

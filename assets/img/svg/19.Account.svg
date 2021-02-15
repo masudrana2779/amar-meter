@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65.723" height="65.723" viewBox="0 0 65.723 65.723">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00af91"/>
+      <stop offset="1" stop-color="#007965"/>
+    </linearGradient>
+    <filter id="Rectangle_5" x="0" y="0" width="65.723" height="65.723" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#00af91" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_115" data-name="Group 115" transform="translate(275 -927)">
+    <g id="Group_16" data-name="Group 16" transform="translate(404)">
+      <g transform="matrix(1, 0, 0, 1, -679, 927)" filter="url(#Rectangle_5)">
+        <rect id="Rectangle_5-2" data-name="Rectangle 5" width="35.723" height="35.723" rx="6" transform="translate(15 10)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="light-mode-home" transform="translate(-254 945)">
+      <g id="file-copyright-user" transform="translate(0 0)">
+        <path id="Combined_Shape" data-name="Combined Shape" d="M4,20.185H4a11.478,11.478,0,1,1,14.96,0A8.359,8.359,0,0,0,4,20.184ZM11.605,5.739A3.571,3.571,0,1,0,15.176,9.31,3.575,3.575,0,0,0,11.605,5.739Z" transform="translate(0 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

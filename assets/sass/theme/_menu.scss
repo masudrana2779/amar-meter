@@ -1,0 +1,73 @@
+.homeMenuWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  padding: 20px 0;
+  background: #fff;
+
+  .homeMenu {
+    display: flex;
+
+    li {
+      width: 100%;
+
+      a {
+        display: block;
+        text-align: center;
+        color: $light;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 500;
+
+        &.active {
+          color: $brandColor;
+
+          .icon {
+            img {
+              opacity: 0;
+
+              & + img {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        span {
+          display: block;
+        }
+
+        .icon {
+          height: 60px;
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            margin: 0 auto;
+            max-width: 65px;
+            width: 100%;
+
+            & + img {
+              opacity: 0;
+            }
+          }
+        }
+
+        .text {
+
+        }
+      }
+    }
+  }
+}
+
