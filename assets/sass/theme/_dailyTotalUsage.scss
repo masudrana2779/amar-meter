@@ -3,6 +3,8 @@
   background: #ffffff;
   border-radius: 20px;
   margin-top: -75px;
+  overflow: hidden;
+
   .bodyContentInner {
 
   }
@@ -11,6 +13,7 @@
 .dailyTotalUsageInner {
   .dailyTotalUsageInnerContent {
     padding-top: 20px;
+
     .dailyTitle {
       color: $dark;
       font-size: 20px;
@@ -18,14 +21,21 @@
       font-weight: 500;
       margin-bottom: 20px;
     }
+
     p {
       padding-left: 30px;
       margin-bottom: 15px;
+      color: #E63024;
+
+      img {
+        margin-right: 10px;
+      }
     }
   }
 }
 
 .dailyTotalUsageWrap {
+  padding-bottom: 150px;
 
 }
 
@@ -34,7 +44,7 @@
     width: 100%;
 
     h5 {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
       line-height: 20px;
       color: $light;
@@ -48,6 +58,434 @@
       line-height: 30px;
       color: $dark;
       text-align: center;
+    }
+  }
+}
+
+.realTimeConsumptionStatusWrap {
+  .realTimeConsumptionStatusInner {
+    .realTimeConsumptionStatusBox {
+      //height: 215px;
+      position: relative;
+
+      .graphLine {
+        height: 195px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        li {
+          width: 100%;
+          height: 1px;
+          background: #D8D8D8;
+          position: absolute;
+          left: 0;
+
+          &:nth-child(1) {
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            top: 25%;
+          }
+
+          &:nth-child(3) {
+            top: 50%;
+          }
+
+          &:nth-child(4) {
+            top: 75%;
+          }
+
+          &:nth-child(5) {
+            top: 100%;
+          }
+        }
+      }
+
+      .barBox {
+        padding: 0 15px;
+
+        .barBoxInner {
+          overflow-x: scroll;
+          overflow-y: hidden;
+
+          .day {
+            position: absolute;
+            bottom: -5px;
+            left: -15px;
+          }
+
+          .night {
+            position: absolute;
+            bottom: -5px;
+            left: -8px;
+
+            img {
+              max-width: 8px;
+              width: 100%;
+            }
+          }
+
+          .graphBar {
+            display: flex;
+            padding: 0 10px 35px;
+            position: relative;
+
+            .peakHour {
+              position: absolute;
+              bottom: 0;
+              border-top: 1px solid #E63024;
+              text-align: center;
+              padding: 0;
+              width: 180px;
+              left: 140px;
+
+              p {
+                font-size: 10px;
+                line-height: 12px;
+                font-weight: 600;
+                padding: 5px 20px;
+              }
+            }
+
+            li {
+              display: inline-block;
+              min-width: 30px;
+              text-align: center;
+              margin: 0 5px 10px;
+              position: relative;
+
+              .bar {
+                height: 195px;
+                margin-bottom: 10px;
+                position: relative;
+
+                .barInner {
+                  background: #04D9B5;
+                  //height: 100%;
+                  width: 10px;
+                  border-radius: 8px 8px 0px 0px;
+                  margin: 0 auto;
+                  min-height: 3px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+
+                  .wattCount {
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s;
+
+                    .wDot {
+                      width: 30px;
+                      height: 30px;
+                      border-radius: 50%;
+                      position: absolute;
+                      top: 0;
+                      left: -10px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background: #FF7D75;
+                      border: 4px solid #FF7D75;
+                      z-index: 2;
+                      cursor: pointer;
+
+                      &:before {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #f00;
+                        border-radius: 50%;
+                        animation: zoomOut 4s linear infinite;
+                        z-index: 1;
+                      }
+
+                      &:after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: #f00;
+                        border-radius: 50%;
+                        animation: zoomOut 1.5s linear infinite;
+                        z-index: 1;
+                      }
+
+                      .dotInner {
+                        width: 100%;
+                        height: 100%;
+                        background: #fff;
+                        border-radius: 50%;
+                        display: flex;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border: 7px solid #FE564C;
+
+                      }
+                    }
+
+                    .wNum {
+                      font-size: 14px;
+                      font-weight: 600;
+                      line-height: 30px;
+                      padding-left: 35px;
+                      position: relative;
+                      z-index: 1;
+
+                      &:before {
+                        position: absolute;
+                        content: "";
+                        top: 13px;
+                        width: 35px;
+                        border-top: 1px dashed #999;
+                        left: 0;
+                        z-index: -1;
+                      }
+                    }
+                  }
+
+                  &.active {
+                    .wattCount {
+                      opacity: 1;
+                      visibility: visible;
+                    }
+                  }
+                }
+              }
+
+              .dayTime {
+                color: $light;
+                font-size: 10px;
+                line-height: 12px;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.monthlyUsesData {
+  background: #00AF91;
+  padding: 15px;
+  //border-radius: 0 0 20px 20px;
+  box-shadow: 0px 10px 20px rgba(0, 175, 145, 0.1);
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    background: #fff;
+    bottom: 36px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: .22;
+  }
+
+  .monthlyUseDataInner {
+    .monthlyUseDataMonth {
+      .monthlyUseDataMonthInner {
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        .monthlyUseDataNav {
+          flex-wrap: initial;
+
+          .nav-item {
+            .nav-link {
+              color: #fff;
+              background: transparent;
+              opacity: 0.57;
+              font-size: 10px;
+              line-height: 16px;
+              font-weight: 600;
+              box-shadow: none;
+              outline: none;
+              padding: 3px 10px;
+              margin: 0 5px;
+              border-radius: 8px;
+
+              &.active {
+                opacity: 1;
+                background: #fff;
+                color: #4C716D;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tab-content {
+
+      .barBox {
+        padding: 0px;
+
+        .barBoxInner {
+          overflow-x: scroll;
+          overflow-y: hidden;
+
+          .graphBar {
+            display: flex;
+            padding: 0;
+            position: relative;
+
+            li {
+              display: inline-block;
+              min-width: 15px;
+              text-align: center;
+              position: relative;
+
+              .bar {
+                height: 100px;
+                margin-bottom: 10px;
+                position: relative;
+
+                .barInner {
+                  background: #fff;
+                  //height: 100%;
+                  width: 10px;
+                  border-radius: 8px 8px 0px 0px;
+                  margin: 0 auto;
+                  min-height: 3px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
+              }
+
+              .date {
+                color: $white;
+                font-size: 10px;
+                line-height: 12px;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.totalInMonth {
+  .totalItem {
+    margin-left: 20px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 12px;
+      width: 100%;
+      margin-right: 5px;
+    }
+  }
+}
+
+.topUpHistoryWrap {
+  .historyTopUp {
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      border-bottom: 1px solid rgba(216, 216, 216 , .16);
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .leftSite {
+        .iconWrap {
+          display: flex;
+
+          .icon {
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            box-shadow: 0px 12px 30px rgba(0, 121, 101, .30);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-right: 10px;
+
+            img {
+              max-width: 18px;
+              width: 100%;
+            }
+          }
+
+          .text {
+            h4 {
+              font-size: 14px;
+              line-height: 20px;
+              color: #4C4C4C;
+              font-weight: 600;
+              margin: 0;
+            }
+
+            p {
+              font-size: 12px;
+              line-height: 20px;
+              color: #B9B9B9;
+              font-weight: 500;
+              text-align: left;
+              padding-left: 0;
+              margin: 0;
+
+            }
+          }
+        }
+      }
+
+      .rightSite {
+        h3 {
+          color: #4C4C4C;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0;
+        }
+      }
+      .seeMore {
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        color: #B9B9B9;
+        font-size: 12px;
+        font-weight: 600;
+      }
     }
   }
 }

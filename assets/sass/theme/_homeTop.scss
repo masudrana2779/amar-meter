@@ -49,16 +49,26 @@
       line-height: 20px;
       font-weight: 300;
       margin-bottom: 100px;
+      .imgZoom {
+        position: relative;
+      }
 
       img {
         margin-right: 10px;
+        &  + img {
+          animation: zoomOut 1.5s linear infinite;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          filter: drop-shadow(2px 0px 0px red);
+        }
       }
     }
   }
 }
 
 .settingIcon {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
 
