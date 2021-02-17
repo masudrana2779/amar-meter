@@ -580,6 +580,7 @@
   font-size: 12px;
   font-weight: 600;
   padding: 0;
+  cursor: pointer;
 }
 
 .myAccountSettingWrap {
@@ -617,6 +618,14 @@
           font-size: 14px;
           line-height: 20px;
           font-weight: 600;
+          display: flex;
+          align-items: center;
+          width: 200px;
+          img {
+            margin-right: 10px;
+            max-width: 25px;
+            width: 100%;
+          }
         }
       }
     }
