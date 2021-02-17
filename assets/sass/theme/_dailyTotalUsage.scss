@@ -290,9 +290,11 @@
                           .dotInner {
                             z-index: 1;
                           }
+
                           &:before {
                             animation: zoomOut 4s linear infinite;
                           }
+
                           &:after {
                             animation: zoomOut 1.5s linear infinite;
                           }
@@ -621,6 +623,7 @@
           display: flex;
           align-items: center;
           width: 200px;
+
           img {
             margin-right: 10px;
             max-width: 25px;
