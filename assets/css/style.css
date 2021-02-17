@@ -12,7 +12,10 @@ ul {
 
 body {
   background: #EBF5F5;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto; }
 
 .w {
   color: #fff; }
@@ -25,10 +28,12 @@ body {
   border-radius: 20px 20px 0 0;
   padding: 10px 0 20px;
   background: #fff;
-  margin-top: 35px;
   z-index: 10;
   -webkit-box-shadow: 0px -10px 30px rgba(0, 175, 145, 0.2);
-  box-shadow: 0px -10px 30px rgba(0, 175, 145, 0.2); }
+  box-shadow: 0px -10px 30px rgba(0, 175, 145, 0.2);
+  max-width: 420px;
+  margin: 0 auto;
+  right: 0; }
   .homeMenuWrap .homeMenu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -76,7 +81,7 @@ body {
               opacity: 0; }
 
 .homeTop {
-  background: url("../../../assets/img/svg/20.BG.svg");
+  background: url("../../../assets/img/svg/20.BG.svg") no-repeat scroll bottom center;
   border-radius: 0 0 40px 40px;
   padding: 40px 0 0 0; }
   .homeTop .topInner p {
@@ -89,6 +94,9 @@ body {
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 15px; }
+    .homeTop .topInner .userName a {
+      color: #fff;
+      text-decoration: none; }
   .homeTop .topInner .useItemWrap {
     padding: 0 15px;
     margin-bottom: 15px; }
@@ -113,9 +121,7 @@ body {
         animation: zoomOut 1.5s linear infinite;
         position: absolute;
         left: 0;
-        top: 5px;
-        -webkit-filter: drop-shadow(2px 0px 0px red);
-        filter: drop-shadow(2px 0px 0px red); }
+        top: 5px; }
 
 .settingIcon {
   position: absolute;
@@ -190,7 +196,8 @@ body {
       height: 1px;
       background: #D8D8D8;
       position: absolute;
-      left: 0; }
+      left: 0;
+      opacity: 0.2; }
       .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .graphLine li:nth-child(1) {
         top: 0; }
       .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .graphLine li:nth-child(2) {
@@ -205,7 +212,21 @@ body {
     padding: 0 15px; }
     .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner {
       overflow-x: scroll;
-      overflow-y: hidden; }
+      overflow-y: hidden;
+      position: relative;
+      -ms-scroll-chaining: none;
+      overscroll-behavior: contain; }
+      .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner::-webkit-scrollbar-track {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: transparent;
+        border-radius: 12px; }
+      .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner::-webkit-scrollbar {
+        height: 2px;
+        background-color: transparent; }
+      .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner::-webkit-scrollbar-thumb {
+        border-radius: 12px;
+        background-color: #eee; }
       .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .day {
         position: absolute;
         bottom: -5px;
@@ -376,14 +397,29 @@ body {
     position: absolute;
     content: "";
     background: #fff;
-    bottom: 36px;
+    bottom: 38px;
     left: 0;
     width: 100%;
     height: 1px;
     opacity: .22; }
   .monthlyUsesData .monthlyUseDataInner .monthlyUseDataMonth .monthlyUseDataMonthInner {
     overflow-x: scroll;
-    overflow-y: hidden; }
+    overflow-y: hidden;
+    position: relative;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain; }
+    .monthlyUsesData .monthlyUseDataInner .monthlyUseDataMonth .monthlyUseDataMonthInner::-webkit-scrollbar-track {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      background-color: transparent;
+      border-radius: 12px; }
+    .monthlyUsesData .monthlyUseDataInner .monthlyUseDataMonth .monthlyUseDataMonthInner::-webkit-scrollbar {
+      height: 2px;
+      background-color: transparent; }
+    .monthlyUsesData .monthlyUseDataInner .monthlyUseDataMonth .monthlyUseDataMonthInner::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background-color: #0fbfa1;
+      background-color: transparent; }
     .monthlyUsesData .monthlyUseDataInner .monthlyUseDataMonth .monthlyUseDataMonthInner .monthlyUseDataNav {
       -ms-flex-wrap: initial;
       flex-wrap: initial; }
@@ -408,7 +444,21 @@ body {
     padding: 0px; }
     .monthlyUsesData .monthlyUseDataInner .tab-content .barBox .barBoxInner {
       overflow-x: scroll;
-      overflow-y: hidden; }
+      overflow-y: hidden;
+      position: relative;
+      -ms-scroll-chaining: none;
+      overscroll-behavior: contain; }
+      .monthlyUsesData .monthlyUseDataInner .tab-content .barBox .barBoxInner::-webkit-scrollbar-track {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: transparent;
+        border-radius: 12px; }
+      .monthlyUsesData .monthlyUseDataInner .tab-content .barBox .barBoxInner::-webkit-scrollbar {
+        height: 2px;
+        background-color: transparent; }
+      .monthlyUsesData .monthlyUseDataInner .tab-content .barBox .barBoxInner::-webkit-scrollbar-thumb {
+        border-radius: 12px;
+        background-color: #eee; }
       .monthlyUsesData .monthlyUseDataInner .tab-content .barBox .barBoxInner .graphBar {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -441,7 +491,7 @@ body {
             font-weight: 600; }
 
 .totalInMonth .totalItem {
-  margin-left: 20px;
+  margin-right: 20px;
   font-size: 12px;
   color: #fff;
   font-weight: 600;
@@ -451,6 +501,8 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .totalInMonth .totalItem:last-child {
+    margin-right: 0; }
   .totalInMonth .totalItem img {
     max-width: 12px;
     width: 100%;
@@ -520,3 +572,115 @@ body {
     color: #B9B9B9;
     font-size: 12px;
     font-weight: 600; }
+
+.myAccountSettingWrap {
+  margin: -50px 0 130px; }
+  .myAccountSettingWrap .accountInfo .infoItem {
+    -webkit-box-shadow: 0px 12px 30px rgba(20, 40, 80, 0.04);
+    box-shadow: 0px 12px 30px rgba(20, 40, 80, 0.04);
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .myAccountSettingWrap .accountInfo .infoItem .icon {
+      margin-right: 15px; }
+    .myAccountSettingWrap .accountInfo .infoItem .info p {
+      margin: 0;
+      color: #B9B9B9;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400; }
+    .myAccountSettingWrap .accountInfo .infoItem .info h4 {
+      margin: 0;
+      color: #4C4C4C;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600; }
+
+.monthlyUsesHistoryData {
+  padding: 20px 0;
+  margin-bottom: 120px; }
+  .monthlyUsesHistoryData .monthlyUseDataMonthInner {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain; }
+    .monthlyUsesHistoryData .monthlyUseDataMonthInner::-webkit-scrollbar-track {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      background-color: transparent;
+      border-radius: 12px; }
+    .monthlyUsesHistoryData .monthlyUseDataMonthInner::-webkit-scrollbar {
+      height: 2px;
+      background-color: transparent; }
+    .monthlyUsesHistoryData .monthlyUseDataMonthInner::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background-color: #0fbfa1;
+      background-color: transparent; }
+    .monthlyUsesHistoryData .monthlyUseDataMonthInner .monthlyUseDataNav {
+      -ms-flex-wrap: initial;
+      flex-wrap: initial; }
+      .monthlyUsesHistoryData .monthlyUseDataMonthInner .monthlyUseDataNav .nav-item .nav-link {
+        color: #B9B9B9;
+        background: transparent;
+        opacity: 0.57;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 600;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        padding: 3px 10px;
+        margin: 0 5px;
+        border-radius: 8px; }
+        .monthlyUsesHistoryData .monthlyUseDataMonthInner .monthlyUseDataNav .nav-item .nav-link.active {
+          opacity: 1;
+          background: #FF5046;
+          color: #fff; }
+  .monthlyUsesHistoryData .usesHistoryItemWrap .usesHistoryItem {
+    background: #fff;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 12px 30px rgba(20, 40, 80, 0.04);
+    box-shadow: 0px 12px 30px rgba(20, 40, 80, 0.04);
+    padding: 10px;
+    margin-bottom: 20px; }
+    .monthlyUsesHistoryData .usesHistoryItemWrap .usesHistoryItem p {
+      color: #B9B9B9;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0; }
+    .monthlyUsesHistoryData .usesHistoryItemWrap .usesHistoryItem .useItemWrap {
+      padding: 5px 2px; }
+      .monthlyUsesHistoryData .usesHistoryItemWrap .usesHistoryItem .useItemWrap .itemInner .useSingItem .icon {
+        margin-right: 5px; }
+        .monthlyUsesHistoryData .usesHistoryItemWrap .usesHistoryItem .useItemWrap .itemInner .useSingItem .icon img {
+          max-width: 13px;
+          width: 100%; }
+      .monthlyUsesHistoryData .usesHistoryItemWrap .usesHistoryItem .useItemWrap .itemInner .useSingItem .text h4 {
+        color: #4C4C4C;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 0; }
+  .monthlyUsesHistoryData .monthlyHistoryList .monthlyHistoryLisInner .monthlyHistoryListItem {
+    margin-bottom: 30px; }
+    .monthlyUsesHistoryData .monthlyHistoryList .monthlyHistoryLisInner .monthlyHistoryListItem h5 {
+      color: #00AF91;
+      font-size: 14px;
+      line-height: 25px;
+      margin: 0; }
+    .monthlyUsesHistoryData .monthlyHistoryList .monthlyHistoryLisInner .monthlyHistoryListItem .historyGraph .totalInMonth {
+      min-width: 150px; }
+      .monthlyUsesHistoryData .monthlyHistoryList .monthlyHistoryLisInner .monthlyHistoryListItem .historyGraph .totalInMonth .totalItem {
+        color: #4C4C4C; }
+    .monthlyUsesHistoryData .monthlyHistoryList .monthlyHistoryLisInner .monthlyHistoryListItem .historyGraph .graph {
+      width: 100%;
+      overflow: hidden; }
+      .monthlyUsesHistoryData .monthlyHistoryList .monthlyHistoryLisInner .monthlyHistoryListItem .historyGraph .graph img {
+        width: 100%; }

@@ -6,9 +6,11 @@
   border-radius: 20px 20px 0 0;
   padding: 10px 0 20px;
   background: #fff;
-  margin-top: 35px;
   z-index: 10;
-  box-shadow: 0px -10px 30px rgba(0 ,175, 145, 0.2);
+  box-shadow: 0px -10px 30px rgba(0, 175, 145, 0.2);
+  max-width: 420px;
+  margin: 0 auto;
+  right: 0;
 
   .homeMenu {
     display: flex;

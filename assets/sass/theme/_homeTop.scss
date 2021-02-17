@@ -1,5 +1,5 @@
 .homeTop {
-  background: url("../../../assets/img/svg/20.BG.svg");
+  background: url("../../../assets/img/svg/20.BG.svg") no-repeat scroll bottom center;
   border-radius: 0 0 40px 40px;
   padding: 40px 0 0 0;
 
@@ -16,6 +16,11 @@
       font-weight: 500;
       line-height: 30px;
       margin-bottom: 15px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
     }
 
     .useItemWrap {
@@ -49,18 +54,20 @@
       line-height: 20px;
       font-weight: 300;
       margin-bottom: 100px;
+
       .imgZoom {
         position: relative;
       }
 
       img {
         margin-right: 10px;
-        &  + img {
+
+        & + img {
           animation: zoomOut 1.5s linear infinite;
           position: absolute;
           left: 0;
           top: 5px;
-          filter: drop-shadow(2px 0px 0px red);
+          //filter: drop-shadow(2px 0px 0px red);
         }
       }
     }

@@ -81,6 +81,7 @@
           background: #D8D8D8;
           position: absolute;
           left: 0;
+          opacity: 0.2;
 
           &:nth-child(1) {
             top: 0;
@@ -110,6 +111,26 @@
         .barBoxInner {
           overflow-x: scroll;
           overflow-y: hidden;
+          position: relative;
+          -ms-scroll-chaining: none;
+          overscroll-behavior: contain;
+
+          &::-webkit-scrollbar-track {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            background-color: transparent;
+            border-radius: 12px;
+          }
+
+          &::-webkit-scrollbar {
+            height: 2px;
+            background-color: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 12px;
+            background-color: #eee;
+          }
 
           .day {
             position: absolute;
@@ -303,7 +324,7 @@
     position: absolute;
     content: "";
     background: #fff;
-    bottom: 36px;
+    bottom: 38px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -315,6 +336,27 @@
       .monthlyUseDataMonthInner {
         overflow-x: scroll;
         overflow-y: hidden;
+        position: relative;
+        -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
+
+        &::-webkit-scrollbar-track {
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          background-color: transparent;
+          border-radius: 12px;
+        }
+
+        &::-webkit-scrollbar {
+          height: 2px;
+          background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 12px;
+          background-color: #0fbfa1;
+          background-color: transparent;
+        }
 
         .monthlyUseDataNav {
           flex-wrap: initial;
@@ -352,6 +394,26 @@
         .barBoxInner {
           overflow-x: scroll;
           overflow-y: hidden;
+          position: relative;
+          -ms-scroll-chaining: none;
+          overscroll-behavior: contain;
+
+          &::-webkit-scrollbar-track {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            background-color: transparent;
+            border-radius: 12px;
+          }
+
+          &::-webkit-scrollbar {
+            height: 2px;
+            background-color: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 12px;
+            background-color: #eee;
+          }
 
           .graphBar {
             display: flex;
@@ -399,12 +461,16 @@
 
 .totalInMonth {
   .totalItem {
-    margin-left: 20px;
+    margin-right: 20px;
     font-size: 12px;
     color: #fff;
     font-weight: 600;
     display: flex;
     align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     img {
       max-width: 12px;
@@ -421,7 +487,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 15px 20px;
-      border-bottom: 1px solid rgba(216, 216, 216 , .16);
+      border-bottom: 1px solid rgba(216, 216, 216, .16);
+
       &:last-child {
         border-bottom: none;
       }
@@ -478,6 +545,7 @@
           margin: 0;
         }
       }
+
       .seeMore {
         text-align: center;
         padding: 0;
@@ -485,6 +553,184 @@
         color: #B9B9B9;
         font-size: 12px;
         font-weight: 600;
+      }
+    }
+  }
+}
+
+.myAccountSettingWrap {
+  margin: -50px 0 130px;
+
+  .accountInfo {
+    .infoItem {
+      box-shadow: 0px 12px 30px rgba(20, 40, 80, 0.04);
+      background: #fff;
+      padding: 10px 30px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: flex;
+
+      .icon {
+        margin-right: 15px;
+
+        img {
+
+        }
+      }
+
+      .info {
+        p {
+          margin: 0;
+          color: #B9B9B9;
+          font-size: 12px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+
+        h4 {
+          margin: 0;
+          color: #4C4C4C;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.monthlyUsesHistoryData {
+  padding: 20px 0;
+  margin-bottom: 120px;
+
+  .monthlyUseDataMonthInner {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain;
+
+    &::-webkit-scrollbar-track {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      background-color: transparent;
+      border-radius: 12px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 2px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background-color: #0fbfa1;
+      background-color: transparent;
+    }
+
+    .monthlyUseDataNav {
+      flex-wrap: initial;
+
+      .nav-item {
+        .nav-link {
+          color: #B9B9B9;
+          background: transparent;
+          opacity: 0.57;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 600;
+          box-shadow: none;
+          outline: none;
+          padding: 3px 10px;
+          margin: 0 5px;
+          border-radius: 8px;
+
+          &.active {
+            opacity: 1;
+            background: #FF5046;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .usesHistoryItemWrap {
+    .usesHistoryItem {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 12px 30px rgba(20, 40, 80, 0.04);
+      padding: 10px;
+      margin-bottom: 20px;
+
+      p {
+        color: #B9B9B9;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+      }
+
+      .useItemWrap {
+        padding: 5px 2px;
+
+        .itemInner {
+          .useSingItem {
+            .icon {
+              margin-right: 5px;
+
+              img {
+                max-width: 13px;
+                width: 100%;
+              }
+            }
+
+            .text {
+              h4 {
+                color: #4C4C4C;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 24px;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .monthlyHistoryList {
+    .monthlyHistoryLisInner {
+      .monthlyHistoryListItem {
+        margin-bottom: 30px;
+        h5 {
+          color: #00AF91;
+          font-size: 14px;
+          line-height: 25px;
+          margin: 0;
+        }
+
+        .historyGraph {
+          .totalInMonth {
+            min-width: 150px;
+            .totalItem {
+              color: #4C4C4C;
+              img {
+
+              }
+            }
+          }
+
+          .graph {
+            width: 100%;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
