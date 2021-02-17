@@ -85,12 +85,12 @@ body {
   border-radius: 0 0 40px 40px;
   padding: 20px 0 0 0; }
   .homeTop .topInner p {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 0; }
   .homeTop .topInner .userName {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 15px; }
