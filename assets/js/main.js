@@ -40,6 +40,23 @@ $(function () {
             }
         }
 
-        monthlyHistoryGraph();
+        // monthlyHistoryGraph();
+
+
+
+
+        function loadMoreItem(){
+            $('.loadItem').slice(0, 5).show();
+            $('#loadmore').on('click', function (e) {
+                e.preventDefault();
+                $('.loadItem:hidden').slice(0, 2).slideDown();
+                if ($('.loadItem:hidden').length === 0) {
+                    $('#loadmore').replaceWith("No More");
+                }
+            });
+        }
+        loadMoreItem();
+
+
     });
 });

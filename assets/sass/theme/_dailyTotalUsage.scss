@@ -16,7 +16,7 @@
 
     .dailyTitle {
       color: $dark;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 30px;
       font-weight: 500;
       margin-bottom: 20px;
@@ -227,7 +227,6 @@
                         height: 100%;
                         background: #f00;
                         border-radius: 50%;
-                        animation: zoomOut 4s linear infinite;
                         z-index: 1;
                       }
 
@@ -240,7 +239,6 @@
                         height: 100%;
                         background: #f00;
                         border-radius: 50%;
-                        animation: zoomOut 1.5s linear infinite;
                         z-index: 1;
                       }
 
@@ -255,6 +253,7 @@
                         top: 0;
                         left: 0;
                         border: 7px solid #FE564C;
+                        z-index: 3;
 
                       }
                     }
@@ -283,6 +282,23 @@
                     .wattCount {
                       opacity: 1;
                       visibility: visible;
+                    }
+
+                    &.live {
+                      .wattCount {
+                        .wDot {
+                          .dotInner {
+                            z-index: 1;
+                          }
+                          &:before {
+                            animation: zoomOut 4s linear infinite;
+                          }
+                          &:after {
+                            animation: zoomOut 1.5s linear infinite;
+                          }
+                        }
+                      }
+
                     }
                   }
                 }
@@ -412,7 +428,7 @@
 
           &::-webkit-scrollbar-thumb {
             border-radius: 12px;
-            background-color: #eee;
+            background-color: #10c3a5;
           }
 
           .graphBar {
@@ -483,79 +499,87 @@
 .topUpHistoryWrap {
   .historyTopUp {
     li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 20px;
-      border-bottom: 1px solid rgba(216, 216, 216, .16);
-
-      &:last-child {
-        border-bottom: none;
+      &.loadItem {
+        display: none;
       }
 
-      .leftSite {
-        .iconWrap {
-          display: flex;
+      .hItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(216, 216, 216, .16);
 
-          .icon {
-            width: 50px;
-            height: 50px;
-            background: #fff;
-            box-shadow: 0px 12px 30px rgba(0, 121, 101, .30);
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .leftSite {
+          .iconWrap {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            margin-right: 10px;
 
-            img {
-              max-width: 18px;
-              width: 100%;
-            }
-          }
+            .icon {
+              width: 40px;
+              height: 40px;
+              background: #fff;
+              box-shadow: 0px 12px 30px rgba(0, 121, 101, .30);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 10px;
+              margin-right: 10px;
 
-          .text {
-            h4 {
-              font-size: 14px;
-              line-height: 20px;
-              color: #4C4C4C;
-              font-weight: 600;
-              margin: 0;
+              img {
+                max-width: 13px;
+                width: 100%;
+              }
             }
 
-            p {
-              font-size: 12px;
-              line-height: 20px;
-              color: #B9B9B9;
-              font-weight: 500;
-              text-align: left;
-              padding-left: 0;
-              margin: 0;
+            .text {
+              h4 {
+                font-size: 14px;
+                line-height: 20px;
+                color: #4C4C4C;
+                font-weight: 600;
+                margin: 0;
+              }
 
+              p {
+                font-size: 12px;
+                line-height: 20px;
+                color: #B9B9B9;
+                font-weight: 500;
+                text-align: left;
+                padding-left: 0;
+                margin: 0;
+
+              }
             }
           }
         }
-      }
 
-      .rightSite {
-        h3 {
-          color: #4C4C4C;
-          font-size: 18px;
-          font-weight: 600;
-          margin: 0;
+        .rightSite {
+          h3 {
+            color: #4C4C4C;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+          }
         }
-      }
-
-      .seeMore {
-        text-align: center;
-        padding: 0;
-        width: 100%;
-        color: #B9B9B9;
-        font-size: 12px;
-        font-weight: 600;
       }
     }
   }
+}
+
+.seeMore {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  width: 100%;
+  color: #B9B9B9;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0;
 }
 
 .myAccountSettingWrap {
@@ -705,6 +729,7 @@
     .monthlyHistoryLisInner {
       .monthlyHistoryListItem {
         margin-bottom: 30px;
+
         h5 {
           color: #00AF91;
           font-size: 14px;
@@ -715,8 +740,10 @@
         .historyGraph {
           .totalInMonth {
             min-width: 150px;
+
             .totalItem {
               color: #4C4C4C;
+
               img {
 
               }
@@ -726,6 +753,7 @@
           .graph {
             width: 100%;
             overflow: hidden;
+
             img {
               width: 100%;
             }

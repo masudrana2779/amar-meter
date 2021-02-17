@@ -83,7 +83,7 @@ body {
 .homeTop {
   background: url("../../../assets/img/svg/20.BG.svg") no-repeat scroll bottom center;
   border-radius: 0 0 40px 40px;
-  padding: 40px 0 0 0; }
+  padding: 20px 0 0 0; }
   .homeTop .topInner p {
     font-size: 16px;
     font-weight: 400;
@@ -96,14 +96,36 @@ body {
     margin-bottom: 15px; }
     .homeTop .topInner .userName a {
       color: #fff;
-      text-decoration: none; }
+      text-decoration: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .homeTop .topInner .userName a img {
+        max-width: 10px;
+        margin-right: 10px; }
+  .homeTop .topInner .userIcon {
+    text-align: center;
+    margin-bottom: 10px; }
+    .homeTop .topInner .userIcon img {
+      max-width: 70px;
+      width: 100%;
+      height: 70px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      padding: 5px; }
   .homeTop .topInner .useItemWrap {
     padding: 0 15px;
     margin-bottom: 15px; }
     .homeTop .topInner .useItemWrap .itemInner .useSingItem .icon {
       margin-right: 10px; }
+      .homeTop .topInner .useItemWrap .itemInner .useSingItem .icon img {
+        max-width: 20px;
+        width: 100%; }
     .homeTop .topInner .useItemWrap .itemInner .useSingItem .text h4 {
-      font-size: 32px;
+      font-size: 26px;
       line-height: 48px;
       font-weight: 600;
       margin-bottom: 0; }
@@ -129,9 +151,7 @@ body {
   right: 20px; }
   .settingIcon img {
     max-width: 20px;
-    width: 100%;
-    -webkit-animation: rot 10s linear infinite;
-    animation: rot 10s linear infinite; }
+    width: 100%; }
 
 @-webkit-keyframes rot {
   0% {
@@ -153,7 +173,7 @@ body {
   padding-top: 20px; }
   .dailyTotalUsageInner .dailyTotalUsageInnerContent .dailyTitle {
     color: #4C4C4C;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     font-weight: 500;
     margin-bottom: 20px; }
@@ -315,8 +335,6 @@ body {
                     height: 100%;
                     background: #f00;
                     border-radius: 50%;
-                    -webkit-animation: zoomOut 4s linear infinite;
-                    animation: zoomOut 4s linear infinite;
                     z-index: 1; }
                   .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .bar .barInner .wattCount .wDot:after {
                     position: absolute;
@@ -327,8 +345,6 @@ body {
                     height: 100%;
                     background: #f00;
                     border-radius: 50%;
-                    -webkit-animation: zoomOut 1.5s linear infinite;
-                    animation: zoomOut 1.5s linear infinite;
                     z-index: 1; }
                   .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .bar .barInner .wattCount .wDot .dotInner {
                     width: 100%;
@@ -342,7 +358,8 @@ body {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    border: 7px solid #FE564C; }
+                    border: 7px solid #FE564C;
+                    z-index: 3; }
                 .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .bar .barInner .wattCount .wNum {
                   font-size: 14px;
                   font-weight: 600;
@@ -361,6 +378,14 @@ body {
               .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .bar .barInner.active .wattCount {
                 opacity: 1;
                 visibility: visible; }
+              .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .bar .barInner.active.live .wattCount .wDot .dotInner {
+                z-index: 1; }
+              .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .bar .barInner.active.live .wattCount .wDot:before {
+                -webkit-animation: zoomOut 4s linear infinite;
+                animation: zoomOut 4s linear infinite; }
+              .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .bar .barInner.active.live .wattCount .wDot:after {
+                -webkit-animation: zoomOut 1.5s linear infinite;
+                animation: zoomOut 1.5s linear infinite; }
           .realTimeConsumptionStatusWrap .realTimeConsumptionStatusInner .realTimeConsumptionStatusBox .barBox .barBoxInner .graphBar li .dayTime {
             color: #B9B9B9;
             font-size: 10px;
@@ -458,7 +483,7 @@ body {
         background-color: transparent; }
       .monthlyUsesData .monthlyUseDataInner .tab-content .barBox .barBoxInner::-webkit-scrollbar-thumb {
         border-radius: 12px;
-        background-color: #eee; }
+        background-color: #10c3a5; }
       .monthlyUsesData .monthlyUseDataInner .tab-content .barBox .barBoxInner .graphBar {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -508,7 +533,10 @@ body {
     width: 100%;
     margin-right: 5px; }
 
-.topUpHistoryWrap .historyTopUp li {
+.topUpHistoryWrap .historyTopUp li.loadItem {
+  display: none; }
+
+.topUpHistoryWrap .historyTopUp li .hItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,15 +548,15 @@ body {
   justify-content: space-between;
   padding: 15px 20px;
   border-bottom: 1px solid rgba(216, 216, 216, 0.16); }
-  .topUpHistoryWrap .historyTopUp li:last-child {
+  .topUpHistoryWrap .historyTopUp li .hItem:last-child {
     border-bottom: none; }
-  .topUpHistoryWrap .historyTopUp li .leftSite .iconWrap {
+  .topUpHistoryWrap .historyTopUp li .hItem .leftSite .iconWrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .topUpHistoryWrap .historyTopUp li .leftSite .iconWrap .icon {
-      width: 50px;
-      height: 50px;
+    .topUpHistoryWrap .historyTopUp li .hItem .leftSite .iconWrap .icon {
+      width: 40px;
+      height: 40px;
       background: #fff;
       -webkit-box-shadow: 0px 12px 30px rgba(0, 121, 101, 0.3);
       box-shadow: 0px 12px 30px rgba(0, 121, 101, 0.3);
@@ -543,16 +571,16 @@ body {
       justify-content: center;
       border-radius: 10px;
       margin-right: 10px; }
-      .topUpHistoryWrap .historyTopUp li .leftSite .iconWrap .icon img {
-        max-width: 18px;
+      .topUpHistoryWrap .historyTopUp li .hItem .leftSite .iconWrap .icon img {
+        max-width: 13px;
         width: 100%; }
-    .topUpHistoryWrap .historyTopUp li .leftSite .iconWrap .text h4 {
+    .topUpHistoryWrap .historyTopUp li .hItem .leftSite .iconWrap .text h4 {
       font-size: 14px;
       line-height: 20px;
       color: #4C4C4C;
       font-weight: 600;
       margin: 0; }
-    .topUpHistoryWrap .historyTopUp li .leftSite .iconWrap .text p {
+    .topUpHistoryWrap .historyTopUp li .hItem .leftSite .iconWrap .text p {
       font-size: 12px;
       line-height: 20px;
       color: #B9B9B9;
@@ -560,18 +588,21 @@ body {
       text-align: left;
       padding-left: 0;
       margin: 0; }
-  .topUpHistoryWrap .historyTopUp li .rightSite h3 {
+  .topUpHistoryWrap .historyTopUp li .hItem .rightSite h3 {
     color: #4C4C4C;
     font-size: 18px;
     font-weight: 600;
     margin: 0; }
-  .topUpHistoryWrap .historyTopUp li .seeMore {
-    text-align: center;
-    padding: 0;
-    width: 100%;
-    color: #B9B9B9;
-    font-size: 12px;
-    font-weight: 600; }
+
+.seeMore {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  width: 100%;
+  color: #B9B9B9;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0; }
 
 .myAccountSettingWrap {
   margin: -50px 0 130px; }
